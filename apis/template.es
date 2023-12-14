@@ -142,4 +142,19 @@ PUT _template/cwl-template
 }
 
 
+We can list all index templates in Elasticsearch to confirm that your template was indeed created. 
+
+GET _cat/templates?v
+
+We get output like this: 
+
+name                  index_patterns order      version composed_of
+tenant_template       [.kibana_-*_*, .kibana_0*_*, .kibana_1*_*, .kibana_2*_*, .kibana_3*_*, .kibana_4*_*, .kibana_5*_*, .kibana_6*_*, .kibana_7*_*, .kibana_8*_*, .kibana_9*_*] 2147483647         
+cwl-template          [cwl-*] 0                  
+ss4o_metrics_template [ss4o_metrics-*-*] 1          1       []
+ss4o_traces_template  [ss4o_traces-*-*] 1          1       []
+
+
+we got cwl-template CREATED. 
+
 
